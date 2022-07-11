@@ -1,38 +1,123 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+  --color1: #000000;
+  --color2: #323232;
+  --color3: #FF1E56;
+  --color4: #FFAC41;
+  --color5: #000441;
+  --color6: #bb7c2a;
+  --color7: #f8b762;
+  --color8: #9e1336;
+  --color-bg-primary: #323232;
+  --color-bg-secondary: #FF1E56;
+  --color-shadow: #000441;
+  --color-hover: #000441;
+
+}
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+  /*
+  font-family: 'Exo', sans-serif;
+  */
+  font-family: 'Roboto Mono', monospace;
+  height: 100%;
+  background:       
+  linear-gradient(190deg, transparent, 60%, var(--color5)),
+  linear-gradient(80deg, transparent, 80%, var(--color6)),
+  linear-gradient(350deg, transparent, 50%, var(--color5)),
+  linear-gradient(170deg, transparent, 50%, var(--color3)),
+  repeating-radial-gradient(circle at center, var(--color4), 10%, var(--color3), var(--color7) 50%, var(--color3), 75%, var(--color4) 100%);
+  min-height: 90vh; /* fix for body bigger than viewport. do not set width */
+  color: var(--color4);
+  font-size: 1.05em;
+  /*
+  font-weight: bold;
+  */
+  margin-bottom: 0;
+  text-align: center;
+  
+}
+
+h1 {
+  margin: 2% auto 0 auto;
+  padding: 0;
+  font-size: 3em;
+}
+
+h2 {
+  margin: 1% auto 0 auto;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.card {
+  font-size: 1.4em;
+  color: var(--color-1);
+  width: 40em;
+  margin: 3% auto 1% auto;
+  padding: 0.5%;
+  background: linear-gradient(135deg, var(--color-bg-primary), var(--color8));
+  border: 10px inset var(--color-border);
+  border-radius: 15px;
+  box-shadow: 0 0 20px 10px var(--color5), 3px 4px 7px inset var(--color6);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+  text-shadow: 4px 4px 4px var(--color-shadow);
+  transition: transform .3s, border .2s, box-shadow .25s; /* Animation */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.card:hover {
+  border: 12px inset var(--color-1);
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 0 40px 20px var(--color6), 5px 8px 5px inset var(--color3);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a:link {text-decoration: none; color: var(--color-text-primary); }
+a:visited { text-decoration: none; color: var(--color4); }
+a:hover { text-decoration: none; color: var(--color7); }
+a:focus { text-decoration: none; color: var(--color4); }
+a:hover, a:active { text-decoration: none; color: var(--color7) }
+
+.secondarytext {
+  color: var(--color6);
+}
+
+p {
+  margin: 0.1%;
+}
+
+
+@media only screen and (max-width: 720px) { /* for mobile screen */
+  .card {
+    width: 90vw;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  #content {
+    padding: 5%;
+    overflow: auto;
+    height: 100%;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+  html, body
+{
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+
+}
 }
