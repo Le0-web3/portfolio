@@ -3,18 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
+  --color1: #4C3A51;
+  --color2: #774360;
+  --color3: #B25068;
+  --color4: #E7AB79;
+  --color5: #251c27;
+  --color6: #b1825c;
+  --color7: #ffbb84;
+  --color8: #723343;
+  --color-bg-primary: #4C3A51;
+  --color-bg-secondary: #774360;
+  --color-shadow: #251c27;
+  --color-hover: #251c27;
+  /*
   --color1: #000000;
   --color2: #323232;
   --color3: #FF1E56;
   --color4: #FFAC41;
   --color5: #000441;
-  --color6: #bb7c2a;
+  --color6: #c9852d;
   --color7: #f8b762;
   --color8: #9e1336;
   --color-bg-primary: #323232;
   --color-bg-secondary: #FF1E56;
-  --color-shadow: #000441;
+  --color-shadow: #020758;
   --color-hover: #000441;
+*/
 
 }
 
@@ -39,7 +53,7 @@ body {
   linear-gradient(80deg, transparent, 80%, var(--color6)),
   linear-gradient(350deg, transparent, 50%, var(--color5)),
   linear-gradient(170deg, transparent, 50%, var(--color3)),
-  repeating-radial-gradient(circle at center, var(--color4), 10%, var(--color3), var(--color7) 50%, var(--color3), 75%, var(--color4) 100%);
+  repeating-radial-gradient(circle at center, var(--color4), 10%, var(--color5), var(--color7) 50%, var(--color3), 75%, var(--color4) 100%);
   min-height: 90vh; /* fix for body bigger than viewport. do not set width */
   color: var(--color4);
   font-size: 1.05em;
@@ -56,6 +70,7 @@ h1 {
   padding: 0;
   font-size: 4em;
   font-weight: normal;
+  text-shadow: 4px 4px 4px var(--color-shadow);
   
 }
 
@@ -64,6 +79,7 @@ h2 {
   padding: 0;
   font-size: 1.5em;
   font-weight: lighter;
+  text-shadow: 4px 4px 4px var(--color-shadow);
 }
 
 .card {
@@ -110,12 +126,15 @@ p {
 @media only screen and (max-width: 720px) { /* for mobile screen */
   .card {
     width: 90vw;
+    font-size: 1.2em;
+    margin-bottom: 5%;
   }
 
   #content {
     padding: 5%;
     overflow: auto;
     height: 100%;
+    font-size: 0.9em;
 
   }
 
@@ -124,6 +143,14 @@ p {
   height: 100%;
   margin: 0;
   overflow: auto;
-
 }
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1em;
+  margin: 5% auto 10% auto;
+}
+
 }
