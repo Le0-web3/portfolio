@@ -3,6 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
+
+
+  --color1: #E7AB79;
+  --color2: #b1825c;
+  --color3: #B25068;
+  --color4: #4C3A51;
+  --color5: #E7AB79;
+  --color6: #774360;
+  --color7: #ffbb84;
+  --color8: #723343;
+  --color-bg-primary: #4C3A51;
+  --color-bg-secondary: #b1825c;
+  --color-shadow: #774360;
+  --color-hover: #251c27;
+
+  /*
   --color1: #4C3A51;
   --color2: #774360;
   --color3: #B25068;
@@ -15,6 +31,8 @@
   --color-bg-secondary: #774360;
   --color-shadow: #251c27;
   --color-hover: #251c27;
+
+  */
   /*
   --color1: #000000;
   --color2: #323232;
@@ -47,6 +65,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   */
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   height: 100%;
   background:       
   linear-gradient(190deg, transparent, 60%, var(--color5)),
@@ -84,7 +103,7 @@ h2 {
 
 .card {
   font-size: 1.4em;
-  color: var(--color-1);
+  color: var(--color2);
   width: 40em;
   margin: 3% auto 1% auto;
   padding: 0.5%;
@@ -108,10 +127,10 @@ h2 {
   /* blur size and spread size are optional (they default to 0) */
 }
 
-a:link {text-decoration: none; color: var(--color-text-primary); }
-a:visited { text-decoration: none; color: var(--color4); }
+a:link {text-decoration: none; color: var(--color2); }
+a:visited { text-decoration: none; color: var(--color2); }
 a:hover { text-decoration: none; color: var(--color7); }
-a:focus { text-decoration: none; color: var(--color4); }
+a:focus { text-decoration: none; color: var(--color2); }
 a:hover, a:active { text-decoration: none; color: var(--color7) }
 
 .secondarytext {
